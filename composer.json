@@ -1,0 +1,10 @@
+{
+    "name": "albert/hexlet-project-1",
+    "authors": [
+        {
+            "name": "Albert",
+            "email": "gumarov2017@yndex.ru"
+        }
+    ],
+    "require": {}
+}
