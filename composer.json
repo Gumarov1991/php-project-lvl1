@@ -5,6 +5,10 @@
             "name": "Albert",
             "email": "gumarov2017@yndex.ru"
         }
+    
     ],
+    "bin": [
+        "bin/brain-games"
+      ],
     "require": {}
 }
