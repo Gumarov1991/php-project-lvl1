@@ -3,7 +3,7 @@
     "authors": [
         {
             "name": "Albert",
-            "email": "gumarov2017@yndex.ru"
+            "email": "gumarov2017@yandex.ru"
         }
     
     ],
@@ -11,7 +11,7 @@
         "bin/brain-games"
     ],
     "autoload": {
-        "files": ["/src/cli.php"]
+        "files": ["src/cli.php"]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
