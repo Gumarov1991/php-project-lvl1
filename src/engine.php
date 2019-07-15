@@ -11,7 +11,7 @@ function rules($text)
 }
 
 function game()
-{   
+{
     for ($i = 0; $i < 3; $i++) {
         $num = rand(0, 100);
         line("Question: {$num}");
