@@ -6,9 +6,9 @@
             "email": "gumarov2017@yandex.ru"
         }
     ],
-    "version": "1.1",
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "brain-even"
     ],
     "autoload": {
         "files": ["src/cli.php", "src/engine.php", "src/brain-even.php"]
