@@ -8,7 +8,7 @@
     ],
     "bin": [
         "bin/brain-games",
-        "brain-even"
+        "bin/brain-even"
     ],
     "autoload": {
         "files": ["src/cli.php", "src/engine.php", "src/brain-even.php"]
