@@ -10,7 +10,7 @@ function engine($game)
         $funcGame = '\\BrainGames\\' . $game . '\\' . $game;
         $answerCorrect = $funcGame();
         $answerPlayer = prompt("Your answer");
-        if ((integer) $answerPlayer === (integer) $answerCorrect) {
+        if ((int) $answerPlayer === (int) $answerCorrect) {
             line("Correct!");
         } else {
             line("'{$answerPlayer}' is wrong answer ;(. Correct answer was '{$answerCorrect}'.");
