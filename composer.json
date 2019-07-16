@@ -8,10 +8,11 @@
     ],
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "autoload": {
-        "files": ["src/cli.php", "src/engine.php", "src/brain-even.php"]
+        "files": ["src/cli.php", "src/engine.php", "src/games/brain-even.php", "src/games/brain-calc.php"]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
