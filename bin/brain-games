@@ -9,5 +9,5 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-const GAME = 'BrainGames\Even';
-BrainGames\Сli\run();
+
+BrainGames\Сli\run('even');
