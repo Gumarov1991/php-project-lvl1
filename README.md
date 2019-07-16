@@ -4,4 +4,4 @@
 [![Build Status](https://travis-ci.org/Gumarov1991/php-project-lvl1.svg?branch=master)](https://travis-ci.org/Gumarov1991/php-project-lvl1)
 ### Install
 
-[![demo](https://asciinema.org/a/113463.svg)](https://asciinema.org/a/MoQf7HWmoSwMHFckxYvzEUE9G?autoplay=1)
+[![demo](https://asciinema.org/a/MoQf7HWmoSwMHFckxYvzEUE9G.svg)](https://asciinema.org/a/MoQf7HWmoSwMHFckxYvzEUE9G?autoplay=1)
