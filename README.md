@@ -4,5 +4,4 @@
 [![Build Status](https://travis-ci.org/Gumarov1991/php-project-lvl1.svg?branch=master)](https://travis-ci.org/Gumarov1991/php-project-lvl1)
 ### Install
 
-1. clone repository
-1. `make install`
+https://asciinema.org/a/MoQf7HWmoSwMHFckxYvzEUE9G
