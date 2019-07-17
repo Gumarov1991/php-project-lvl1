@@ -1,5 +1,11 @@
 {
     "name": "albert1991/hexlet-project-1",
+    "description": "'Brain games' is the set of 5 games for check your intellect",
+    "type": "library",
+    "keywords": [
+        "game",
+        "php"
+    ],
     "authors": [
         {
             "name": "Albert",
