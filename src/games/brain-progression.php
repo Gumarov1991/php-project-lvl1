@@ -8,7 +8,7 @@ const RULES = 'What number is missing in the progression?';
 function progression()
 {
     $arr = generateArrProgression();
-    $keyQuestion = rand(0, 10);
+    $keyQuestion = rand(0, 9);
     $result = $arr[$keyQuestion];
     $arr[$keyQuestion] = '..';
     $strQuestion = implode(" ", $arr);
