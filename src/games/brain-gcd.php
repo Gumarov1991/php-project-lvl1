@@ -15,6 +15,6 @@ function gcd()
             if ($num2 % $i === 0) {
                 return $i;
             }
-        } 
+        }
     }
 }
