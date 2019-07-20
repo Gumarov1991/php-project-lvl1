@@ -11,10 +11,8 @@ function gcd()
     $num2 = rand(1, 100);
     line("Question: {$num1} {$num2}");
     for ($i = $num1; $i > 0; $i--) {
-        if ($num1 % $i === 0) {
-            if ($num2 % $i === 0) {
-                return $i;
-            }
+        if ($num1 % $i === 0 && $num2 % $i === 0) {
+            return $i;
         }
     }
 }
