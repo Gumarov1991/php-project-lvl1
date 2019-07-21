@@ -1,18 +1,36 @@
 <?php
 namespace BrainGames\Calc;
 
-use function \cli\line;
+use function \BrainGames\Cli\runGame;
 
+const GAME = 'calc';
+const FUNC_NAME = 'toCalculate';
 const RULES = 'What is the result of the expression?';
+const OPERATORS = ['+', '-', '*'];
 
-function calc()
+
+function run()
 {
-    $operators = ['+', '-', '*'];
+    runGame(GAME);
+}
+
+function toCalculate()
+{
     $num1 = rand(0, 30);
     $num2 = rand(0, 30);
-    $key = array_rand($operators);
-    $expression = "{$num1} {$operators[$key]} {$num2}";
-    line("Question: {$expression}");
-    eval("\$result = " . $expression . ";");
-    return $result;
+    $key = array_rand(OPERATORS);
+    $operator = OPERATORS[$key];
+    $question = "{$num1} {$operator} {$num2}";
+    switch ($operator) {
+        case '+':
+            $result = $num1 + $num2;
+        break;
+        case '-':
+            $result = $num1 - $num2;
+        break;
+        case '*':
+            $result = $num1 * $num2;
+    }
+    return [$question, $result];
 }
+

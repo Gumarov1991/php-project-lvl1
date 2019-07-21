@@ -1,21 +1,33 @@
 <?php
 namespace BrainGames\Prime;
 
-use function \cli\line;
+use function \BrainGames\Cli\runGame;
 
+const GAME = 'prime';
+const FUNC_NAME = 'isPrime';
 const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function prime()
+function run()
+{
+    runGame(GAME);
+}
+
+function isPrime()
 {
     $num = rand(1, 1000);
-    line("Question: {$num}");
+    $question = $num;
     if ($num === 1) {
-        return 'no';
+        $result = 'no';
     }
-    for ($i = 2; $i < $num; $i++) {
+    for ($i = 2; $i <= $num; $i++) {
+        if ($i === $num) {
+            $result = 'yes';
+            break;
+        }
         if ($num % $i === 0) {
-            return 'no';
+            $result = 'no';
+            break;
         }
     }
-    return 'yes';
+    return [$question, $result];
 }

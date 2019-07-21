@@ -1,16 +1,16 @@
 <?php
-namespace BrainGames\Сli;
+
+namespace BrainGames\Cli;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Engine\rules;
 use function \BrainGames\Engine\engine;
 
-function run($game)
+function runGame($game)
 {
     line('Welcome to the Brain Game!');
-    $gameConst = "\\BrainGames\\" . $game . "\\RULES";
-    line(constant($gameConst));
+    $gameRules = "\\BrainGames\\" . $game . "\\RULES";
+    line(constant($gameRules));
     $playerName = prompt('May I have your name?');
     line("Hello, %s!", $playerName);
     if (engine($game)) {

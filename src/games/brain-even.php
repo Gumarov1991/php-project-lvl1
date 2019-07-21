@@ -1,13 +1,26 @@
 <?php
 namespace BrainGames\Even;
 
-use function \cli\line;
+use function \BrainGames\Cli\runGame;
 
+const GAME = 'even';
+const FUNC_NAME = 'checkEven';
 const RULES = 'Answer "yes" if number even otherwise answer "no".';
 
-function even()
+function run()
+{
+    runGame(GAME);
+}
+
+function checkEven()
 {
     $num = rand(0, 100);
-    line("Question: {$num}");
-    return $num % 2 === 0 ? "yes" : "no";
+    $question = $num;
+    $result = isEven($num) ? 'yes' : 'no';
+    return [$question, $result];
+}
+
+function isEven($num)
+{
+    return $num % 2 === 0;
 }
