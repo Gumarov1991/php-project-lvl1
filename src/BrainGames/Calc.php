@@ -33,12 +33,10 @@ function getDataGame()
     switch ($operator) {
         case '+':
             $result = $num1 + $num2;
-        break;
-
+            break;
         case '-':
             $result = $num1 - $num2;
-        break;
-        
+            break;
         case '*':
             $result = $num1 * $num2;
     }
