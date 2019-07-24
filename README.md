@@ -1,7 +1,6 @@
 # Brain-Games
 [![Build Status](https://travis-ci.org/Gumarov1991/php-project-lvl1.svg?branch=master)](https://travis-ci.org/Gumarov1991/php-project-lvl1)
 <a href="https://codeclimate.com/github/Gumarov1991/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/fb738f4db591456f44ff/maintainability" /></a>
-<a href="https://codeclimate.com/github/Gumarov1991/php-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/fb738f4db591456f44ff/test_coverage" /></a>
 
 ### 'Brain games' is the set of 5 games for check your intellect
 
