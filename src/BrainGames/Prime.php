@@ -2,6 +2,7 @@
 namespace BrainGames\Prime;
 
 use function \BrainGames\Engine\runGame;
+use const \BrainGames\Engine\LEVELS_COUNT;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const RAND_MIN = 1;
@@ -15,7 +16,7 @@ function run()
 function getAllLevelsData()
 {
     $result = [];
-    for ($i = 0; $i < \BrainGames\Engine\LEVELS_COUNT; $i++) {
+    for ($i = 0; $i < LEVELS_COUNT; $i++) {
         $result[] = getDataGame();
     }
     return $result;

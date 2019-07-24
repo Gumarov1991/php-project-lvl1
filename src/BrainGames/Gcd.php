@@ -2,6 +2,7 @@
 namespace BrainGames\Gcd;
 
 use function \BrainGames\Engine\runGame;
+use const \BrainGames\Engine\LEVELS_COUNT;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 const RAND_MIN = 1;
@@ -15,7 +16,7 @@ function run()
 function getAllLevelsData()
 {
     $result = [];
-    for ($i = 0; $i < \BrainGames\Engine\LEVELS_COUNT; $i++) {
+    for ($i = 0; $i < LEVELS_COUNT; $i++) {
         $result[] = getDataGame();
     }
     return $result;

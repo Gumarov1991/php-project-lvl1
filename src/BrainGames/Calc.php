@@ -2,6 +2,7 @@
 namespace BrainGames\Calc;
 
 use function \BrainGames\Engine\runGame;
+use const \BrainGames\Engine\LEVELS_COUNT;
 
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATORS = ['+', '-', '*'];
@@ -17,7 +18,7 @@ function run()
 function getAllLevelsData()
 {
     $result = [];
-    for ($i = 0; $i < \BrainGames\Engine\LEVELS_COUNT; $i++) {
+    for ($i = 0; $i < LEVELS_COUNT; $i++) {
         $result[] = getDataGame();
     }
     return $result;
