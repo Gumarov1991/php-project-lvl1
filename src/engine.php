@@ -5,14 +5,25 @@ namespace BrainGames\Engine;
 use function \cli\line;
 use function \cli\prompt;
 
-
 const LEVELS_COUNT = 3;
 
-function engine($game)
+function runGame($description, $dataGames)
 {
-    $gameFunction = "\\BrainGames\\" . $game . "\\" . constant("\\BrainGames\\" . $game . "\\FUNC_NAME");
-    for ($i = 0; $i < LEVELS_COUNT; $i++) {
-        [$questionGame, $answerCorrect] = $gameFunction();
+    line('Welcome to the Brain Game!');
+    line($description);
+    $playerName = prompt('May I have your name?');
+    line("Hello, %s!", $playerName);
+    if (engine($description, $dataGames)) {
+        line("Congratulations, {$playerName}!");
+    } else {
+        line("Let's try again, {$playerName}!");
+    };
+}
+
+function engine($description, $dataGames)
+{
+    foreach ($dataGames as $dataGame) {
+        [$questionGame, $answerCorrect] = $dataGame;
         line("Question: {$questionGame}");
         $answerPlayer = prompt("Your answer");
         if ((string) $answerPlayer === (string) $answerCorrect) {
