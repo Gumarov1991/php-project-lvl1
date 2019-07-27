@@ -23,11 +23,11 @@
     "autoload": {
         "files": [
             "src/engine.php",
-            "src/BrainGames/Even.php",
-            "src/BrainGames/Calc.php",
-            "src/BrainGames/Gcd.php",
-            "src/BrainGames/Progression.php",
-            "src/BrainGames/Prime.php"
+            "src/BrainGames/calc.php",
+            "src/BrainGames/even.php",
+            "src/BrainGames/gcd.php",
+            "src/BrainGames/progression.php",
+            "src/BrainGames/prime.php"
         ]
     },
     "require": {
