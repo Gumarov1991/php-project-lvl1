@@ -2,7 +2,6 @@
 namespace BrainGames\progression;
 
 use function \BrainGames\Engine\runGame;
-use const \BrainGames\Engine\LEVELS_COUNT;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 const RAND_MIN = 0;
