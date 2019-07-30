@@ -1,7 +1,7 @@
 <?php
-namespace BrainGames\progression;
+namespace games\progression;
 
-use function \BrainGames\Engine\runGame;
+use function \games\engine\getRoundData;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 const RAND_MIN = 0;
@@ -16,22 +16,25 @@ function run()
         $start = rand(RAND_MIN, RAND_MAX);
         $step = rand(RAND_MIN_STEP, RAND_MAX_STEP);
         $progression = generateProgression($start, $step);
-        $keyQuestion = rand(0, sizeof($progression) - 1);
-        $answer = $progression[$keyQuestion];
-        $progression[$keyQuestion] = '..';
+        //$hiddenElementIndex = rand(0, sizeof($progression) - 1);
+        //$answer = $progression[$hiddenElementIndex];
+        //$progression[$hiddenElementIndex] = '..';
+        $answer = $progression[rand(0, sizeof($progression) - 1)];
+        $progression[rand(0, sizeof($progression) - 1)] = '..';
         $question = implode(" ", $progression);
-        return [$question, $answer];
+        return [$question, (string) $answer];
     };
 
-    runGame(DESCRIPTION, $generateData);
+    getRoundData(DESCRIPTION, $generateData);
 }
 
 function generateProgression($start, $step)
 {
     $progression = [];
+    $progressionElement = $start;
     for ($i = 0; $i < SIZE_OF_PROGRESSION; $i++) {
-        $progression[] = $start;
-        $start += $step;
+        $progression[] = $progressionElement;
+        $progressionElement += $step;
     }
     return $progression;
 }

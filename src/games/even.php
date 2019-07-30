@@ -1,7 +1,7 @@
 <?php
-namespace BrainGames\even;
+namespace games\even;
 
-use function \BrainGames\Engine\runGame;
+use function \games\engine\getRoundData;
 
 const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".';
 const RAND_MIN = 0;
@@ -15,7 +15,7 @@ function run()
         return [$question, $answer];
     };
 
-    runGame(DESCRIPTION, $generateData);
+    getRoundData(DESCRIPTION, $generateData);
 }
 
 function isEven($num)

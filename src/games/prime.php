@@ -1,7 +1,7 @@
 <?php
-namespace BrainGames\prime;
+namespace games\prime;
 
-use function \BrainGames\Engine\runGame;
+use function \games\engine\getRoundData;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const RAND_MIN = 0;
@@ -15,7 +15,7 @@ function run()
         return [$question, $answer];
     };
 
-    runGame(DESCRIPTION, $generateData);
+    getRoundData(DESCRIPTION, $generateData);
 }
 
 function isPrime($num)

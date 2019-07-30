@@ -1,7 +1,7 @@
 <?php
-namespace BrainGames\gcd;
+namespace games\gcd;
 
-use function \BrainGames\Engine\runGame;
+use function \games\engine\getRoundData;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 const RAND_MIN = 1;
@@ -17,7 +17,7 @@ function run()
         return [$question, $answer];
     };
 
-    runGame(DESCRIPTION, $generateData);
+    getRoundData(DESCRIPTION, $generateData);
 }
 
 function getGcd($num1, $num2)

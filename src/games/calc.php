@@ -1,7 +1,7 @@
 <?php
-namespace BrainGames\calc;
+namespace games\calc;
 
-use function \BrainGames\Engine\runGame;
+use function \games\engine\getRoundData;
 
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATORS = ['+', '-', '*'];
@@ -29,5 +29,5 @@ function run()
         return [$question, $answer];
     };
 
-    runGame(DESCRIPTION, $generateData);
+    getRoundData(DESCRIPTION, $generateData);
 }

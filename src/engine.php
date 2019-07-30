@@ -1,12 +1,12 @@
 <?php
-namespace BrainGames\engine;
+namespace games\engine;
 
 use function \cli\line;
 use function \cli\prompt;
 
 const LEVELS_COUNT = 3;
 
-function runGame($description, $getDataGame)
+function getRoundData($description, $getDataGame)
 {
     line('Welcome to the Brain Game!');
     line($description);
@@ -16,7 +16,7 @@ function runGame($description, $getDataGame)
         [$questionGame, $answerCorrect] = $getDataGame();
         line("Question: {$questionGame}");
         $answerPlayer = prompt("Your answer");
-        if ((string) $answerPlayer === (string) $answerCorrect) {
+        if ($answerPlayer === $answerCorrect) {
             line("Correct!");
         } else {
             line("'{$answerPlayer}' is wrong answer ;(. Correct answer was '{$answerCorrect}'.");
