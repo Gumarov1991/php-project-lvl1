@@ -15,12 +15,10 @@ function run()
     $generateData = function () {
         $start = rand(RAND_MIN, RAND_MAX);
         $step = rand(RAND_MIN_STEP, RAND_MAX_STEP);
-        $progression = generateProgression($start, $step);
-        //$hiddenElementIndex = rand(0, sizeof($progression) - 1);
-        //$answer = $progression[$hiddenElementIndex];
-        //$progression[$hiddenElementIndex] = '..';
-        $answer = $progression[rand(0, sizeof($progression) - 1)];
-        $progression[rand(0, sizeof($progression) - 1)] = '..';
+        $progression = generateProgression($start, $step, SIZE_OF_PROGRESSION);
+        $hiddenElementIndex = rand(0, sizeof($progression) - 1);
+        $answer = $progression[$hiddenElementIndex];
+        $progression[$hiddenElementIndex] = '..';
         $question = implode(" ", $progression);
         return [$question, (string) $answer];
     };
@@ -28,11 +26,11 @@ function run()
     getRoundData(DESCRIPTION, $generateData);
 }
 
-function generateProgression($start, $step)
+function generateProgression($start, $step, $sizeOfProgression)
 {
     $progression = [];
     $progressionElement = $start;
-    for ($i = 0; $i < SIZE_OF_PROGRESSION; $i++) {
+    for ($i = 0; $i < $sizeOfProgression; $i++) {
         $progression[] = $progressionElement;
         $progressionElement += $step;
     }
