@@ -13,7 +13,7 @@ function run()
         $num1 = rand(RAND_MIN, RAND_MAX);
         $num2 = rand(RAND_MIN, RAND_MAX);
         $question = "$num1 $num2";
-        $answer = getGcd($num1, $num2);
+        $answer = (string) getGcd($num1, $num2);
         return [$question, $answer];
     };
 

@@ -18,13 +18,13 @@ function run()
         $question = "$num1 $operator $num2";
         switch ($operator) {
             case '+':
-                $answer = $num1 + $num2;
+                $answer = (string) ($num1 + $num2);
                 break;
             case '-':
-                $answer = $num1 - $num2;
+                $answer = (string) ($num1 - $num2);
                 break;
             case '*':
-                $answer = $num1 * $num2;
+                $answer = (string) ($num1 * $num2);
         }
         return [$question, $answer];
     };
