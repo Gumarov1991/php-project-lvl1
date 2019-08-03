@@ -1,7 +1,7 @@
 <?php
 namespace games\progression;
 
-use function \games\engine\getRoundData;
+use function \games\engine\engine;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 const RAND_MIN = 0;
@@ -23,7 +23,7 @@ function run()
         return [$question, (string) $answer];
     };
 
-    getRoundData(DESCRIPTION, $generateData);
+    engine(DESCRIPTION, $generateData);
 }
 
 function generateProgression($start, $step, $sizeOfProgression)

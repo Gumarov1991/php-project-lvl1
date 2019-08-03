@@ -1,7 +1,7 @@
 <?php
 namespace games\calc;
 
-use function \games\engine\getRoundData;
+use function \games\engine\engine;
 
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATORS = ['+', '-', '*'];
@@ -13,8 +13,7 @@ function run()
     $generateData = function () {
         $num1 = rand(RAND_MIN, RAND_MAX);
         $num2 = rand(RAND_MIN, RAND_MAX);
-        $randKey = array_rand(OPERATORS);
-        $operator = OPERATORS[$randKey];
+        $operator = OPERATORS[array_rand(OPERATORS)];
         $question = "$num1 $operator $num2";
         switch ($operator) {
             case '+':
@@ -29,5 +28,5 @@ function run()
         return [$question, $answer];
     };
 
-    getRoundData(DESCRIPTION, $generateData);
+    engine(DESCRIPTION, $generateData);
 }

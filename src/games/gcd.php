@@ -1,7 +1,7 @@
 <?php
 namespace games\gcd;
 
-use function \games\engine\getRoundData;
+use function \games\engine\engine;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 const RAND_MIN = 1;
@@ -17,7 +17,7 @@ function run()
         return [$question, $answer];
     };
 
-    getRoundData(DESCRIPTION, $generateData);
+    engine(DESCRIPTION, $generateData);
 }
 
 function getGcd($num1, $num2)

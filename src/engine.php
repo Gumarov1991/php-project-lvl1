@@ -6,7 +6,7 @@ use function \cli\prompt;
 
 const LEVELS_COUNT = 3;
 
-function getRoundData($description, $getDataGame)
+function engine($description, $getDataGame)
 {
     line('Welcome to the Brain Game!');
     line($description);
