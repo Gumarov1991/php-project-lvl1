@@ -13,13 +13,13 @@ function engine($description, $getDataGame)
     $playerName = prompt('May I have your name?');
     line("Hello, %s!", $playerName);
     for ($i = 0; $i < LEVELS_COUNT; $i++) {
-        [$questionGame, $answerCorrect] = $getDataGame();
-        line("Question: {$questionGame}");
+        [$question, $correctAnswer] = $getDataGame();
+        line("Question: {$question}");
         $answerPlayer = prompt("Your answer");
-        if ($answerPlayer === $answerCorrect) {
+        if ($answerPlayer === $correctAnswer) {
             line("Correct!");
         } else {
-            line("'{$answerPlayer}' is wrong answer ;(. Correct answer was '{$answerCorrect}'.");
+            line("'{$answerPlayer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, {$playerName}!");
             return;
         }
